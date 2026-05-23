@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="challenge-container">
+        <button class="back-btn" onclick="window.location.href='dashboard.html'">← BACK TO DASHBOARD</button>
+
+        <div class="challenge-card" id="challengeCard">
+            <div class="challenge-header">
+                <h1 id="challengeTitle"></h1>
+                <div class="badges">
+                    <span class="category-badge" id="challengeCategory"></span>
+                    <span class="difficulty-badge" id="challengeDifficulty"></span>
+                    <span class="points-badge" id="challengePoints"></span>
+                </div>
+            </div>
+
+            <div class="challenge-content">
+                <div class="research-section">
+                    <h3>📚 RESEARCH BASIS</h3>
+                    <p id="researchBasis"></p>
+                </div>
+
+                <div class="description-section">
+                    <h3>🎯 CHALLENGE DESCRIPTION</h3>
+                    <p id="challengeDescription"></p>
+                </div>
+
+                <!-- LOCKED HINTS SECTION -->
+                <div class="hints-section">
+                    <h3>💡 HINTS (Click to Reveal)</h3>
+
+                    <!-- Hint 1 - Locked -->
+                    <div class="hint-container" id="hint1Container">
+                        <div class="hint-locked" id="hint1Locked">
+                            <span class="hint-icon">🔒</span>
+                            <span class="hint-text">HINT 1 is LOCKED</span>
+                            <button class="reveal-hint-btn" onclick="revealHint(1)">🔓 REVEAL HINT 1</button>
+                        </div>
+                        <div class="hint-content hidden" id="hint1Content">
+                            <span class="hint-icon">💡</span>
+                            <span id="hint1Text"></span>
+                        </div>
+                    </div>
+
+                    <!-- Hint 2 - Locked -->
+                    <div class="hint-container" id="hint2Container">
+                        <div class="hint-locked" id="hint2Locked">
+                            <span class="hint-icon">🔒</span>
+                            <span class="hint-text">HINT 2 is LOCKED</span>
+                            <button class="reveal-hint-btn" onclick="revealHint(2)">🔓 REVEAL HINT 2</button>
+                        </div>
+                        <div class="hint-content hidden" id="hint2Content">
+                            <span class="hint-icon">💡</span>
+                            <span id="hint2Text"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="files-section">
+                    <h3>📁 EVIDENCE FILES</h3>
+                    <div id="downloadLinks"></div>
+                </div>
+
+                <div class="flag-section">
+                    <h3>🏁 FLAG SUBMISSION</h3>
+                    <input type="text" id="flagInput" placeholder="CTF{...}">
+                    <button onclick="submitFlag()" class="submit-btn">✓ VERIFY FLAG</button>
+                    <div id="resultMessage"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

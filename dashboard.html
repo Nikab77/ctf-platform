@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Arena - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <div class="logo">[CTF_ARENA]</div>
+            <div class="player-info">
+                <span id="playerName">Agent</span>
+                <span class="score" id="playerScore">SCORE: 0</span>
+                <button onclick="logout()" class="logout-btn">⤒ EXIT</button>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat">🎯 CHALLENGES: <span id="solvedCount">0</span>/10</div>
+            <div class="stat">🏆 TOTAL POINTS: <span id="totalPoints">0</span>/1500</div>
+            <div class="stat">⚡ PROGRESS: <span id="progressPercent">0</span>%</div>
+        </div>
+
+        <div class="categories">
+            <div class="category">
+                <h2>🔐 SESSION HIJACKING</h2>
+                <div class="challenge-grid" id="sessionChallenges"></div>
+            </div>
+
+            <div class="category">
+                <h2>💣 BINARY EXPLOITATION</h2>
+                <div class="challenge-grid" id="binaryChallenges"></div>
+            </div>
+
+            <div class="category">
+                <h2>🔒 CRYPTOGRAPHY</h2>
+                <div class="challenge-grid" id="cryptoChallenges"></div>
+            </div>
+
+            <div class="category">
+                <h2>🖼️ STEGANOGRAPHY</h2>
+                <div class="challenge-grid" id="stegoChallenges"></div>
+            </div>
+
+            <div class="category">
+                <h2>🤖 AI & DOCKER SECURITY</h2>
+                <div class="challenge-grid" id="aiChallenges"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

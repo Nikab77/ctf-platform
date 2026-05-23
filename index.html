@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Arena - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cyber-card">
+            <div class="glitch" data-text="CTF ARENA">CTF ARENA</div>
+            <p class="subtitle">Capture The Flag • Web Security Challenges</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+
+                <button type="submit" class="cyber-button">➤ ACCESS SYSTEM</button>
+            </form>
+
+            <p class="register-link">No account? <a href="register.html">CREATE USER</a></p>
+
+            <div class="matrix-bg"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Handle login
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const users = JSON.parse(localStorage.getItem('ctf_users') || '{}');
+
+            if (users[username] && users[username].password === password) {
+                localStorage.setItem('current_user', username);
+                localStorage.setItem('player_score', users[username].score || 0);
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('❌ Access Denied: Invalid credentials');
+            }
+        });
+    </script>
+</body>
+
+</html>

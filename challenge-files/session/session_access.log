@@ -1,0 +1,8 @@
+127.0.0.1 - - [21/May/2026:10:12:01] "GET /login HTTP/1.1" 200
+127.0.0.1 - - [21/May/2026:10:12:05] "POST /login HTTP/1.1" 302
+127.0.0.1 - - [21/May/2026:10:12:06] "GET /dashboard HTTP/1.1" 200
+
+[debug]
+player_session=guest_29fda882
+backup_cookie=Y29va2llX3ZhbHVlX25lZWRzX2RlY29kaW5n
+debug_mode=true

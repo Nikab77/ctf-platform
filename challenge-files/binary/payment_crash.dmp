@@ -1,0 +1,12 @@
+PAYMENT_CHECKER CRASH DUMP
+--------------------------------
+Fault: unsafe printf-style memory disclosure
+Thread: worker-02
+
+Memory fragments:
+0x00008000=deadbeef
+0x00008004=cafebabe
+0x00008008=baadf00d
+0x0000800C=feedface
+
+End of dump.

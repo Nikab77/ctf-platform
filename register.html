@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Arena - Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cyber-card">
+            <h1 class="neon-text">// REGISTER_AGENT</h1>
+
+            <form id="registerForm">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="confirm" required>
+                    <label>Confirm Password</label>
+                </div>
+
+                <button type="submit" class="cyber-button">⟳ INITIALIZE_AGENT</button>
+            </form>
+
+            <p class="register-link"><a href="index.html">← RETURN TO LOGIN</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const confirm = document.getElementById('confirm').value;
+
+            if (password !== confirm) {
+                alert('❌ Password mismatch');
+                return;
+            }
+
+            const users = JSON.parse(localStorage.getItem('ctf_users') || '{}');
+
+            if (users[username]) {
+                alert('❌ Username already exists');
+                return;
+            }
+
+            users[username] = {
+                password: password,
+                score: 0,
+                solved: []
+            };
+
+            localStorage.setItem('ctf_users', JSON.stringify(users));
+            alert('✅ Agent registered! Redirecting to login...');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+RSA Parameters:
+n = 3233
+e = 17
+ciphertext = 855
+
+Hint: Factor n, calculate the private key, decrypt the ciphertext.
