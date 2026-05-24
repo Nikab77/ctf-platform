@@ -1,4 +1,3 @@
-cat > vault_checker.c << 'EOF'
 #include <stdio.h>
 
 int main() {
@@ -12,4 +11,3 @@ int main() {
     printf("\n");
     return 0;
 }
-EOF
