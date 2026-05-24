@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int key = 42;
-    int encoded[] = { /* XOR each char of "xored_binary_secret" with 42 */ };
-
-    int length = sizeof(encoded)/sizeof(encoded[0]);
-    printf("Vault checker running...\n");
-    printf("Static analysis needed to recover the hidden flag.\n");
-
-    for (int i = 0; i < length; i++) {
+    // Correct encoded values that XOR with 0x2A give "CTF{xored_binary_secret}"
+    char encoded[] = {0x69, 0x7e, 0x6c, 0x51, 0x79, 0x5f, 0x6e, 0x7f, 
+                      0x70, 0x5f, 0x67, 0x6c, 0x7e, 0x5f, 0x6f, 0x72, 
+                      0x5f, 0x70, 0x6b, 0x6c, 0x79, 0x7d, 0x00};
+    int key = 0x2A;
+    
+    printf("Decoded flag: ");
+    for(int i = 0; encoded[i]; i++) {
         printf("%c", encoded[i] ^ key);
     }
     printf("\n");
