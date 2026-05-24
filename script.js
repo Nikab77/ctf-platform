@@ -71,7 +71,7 @@ const challenges = [
         description: "A developer used MD5 to protect a sensitive value. The hash is stored in the .dat file. Crack the hash to find the original value and submit in flag format.",
         hint1: "MD5 is fast and reversible via rainbow tables. The hash '5f4dcc3b5aa765d61d8327deb882cf99' is a common word.",
         hint2: "The hash cracks to 'weakcrypto' (without CTF{}). Put it in the flag format.",
-        flag: "CTF{weakcrypto}",
+        flag: "CTF{password}",
         file_path: "challenge-files/crypto/hash_vault.dat",
         file_name: "hash_vault.dat"
     },
