@@ -115,7 +115,7 @@ const challenges = [
         description: "The image contains a hidden payload using LSB steganography. The extracted data needs multiple transformations before the flag becomes readable.",
         hint1: "Use steganography tools like steghide, zsteg, or write a Python script to extract LSB bits.",
         hint2: "Extract LSB, then decode from base64 to get the flag.",
-        flag: "CTF{layered_stego_payload}",
+        flag: "CTF{metadata_chain_found}",
         file_path: "challenge-files/stego/cat_stego.png",
         file_name: "cat_stego.png"
     },
