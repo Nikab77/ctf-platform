@@ -101,7 +101,7 @@ const challenges = [
         description: "An image contains a hidden secret in its metadata. The image looks normal but the comments section holds an encoded value. Extract and decode it.",
         hint1: "Use exiftool or similar metadata viewer. Run: exiftool night_stadium_metadata.jpg",
         hint2: "Look for Comment or XPComment field containing the flag.",
-        flag: "CTF{metadata_chain_found}",
+        flag: "CTF{layered_stego_payload}",
         file_path: "challenge-files/stego/night_stadium_metadata.jpg",
         file_name: "night_stadium_metadata.jpg"
     },
