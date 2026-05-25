@@ -102,7 +102,7 @@ const challenges = [
         hint1: "Use exiftool or similar metadata viewer. Run: exiftool night_stadium_metadata.jpg",
         hint2: "Look for Comment or XPComment field containing the flag.",
         flag: "CTF{layered_stego_payload}",
-        file_path: "challenge-files/stego/night_stadium_metadata.jpg",
+        file_path: "challenge-files/stego/night_stadium_metadata.png.png",
         file_name: "night_stadium_metadata.jpg"
     },
     {
