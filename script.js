@@ -132,7 +132,7 @@ const challenges = [
         hint1: "The 'internal_cache' field contains a base64 encoded string. Decode it.",
         hint2: "The decoded value reveals the flag.",
         flag: "CTF{prompt_boundary_bypass_found}",
-        file_path: "challenge-files/ai-docker/llm_audit_trace.json",
+        file_path: "challenge-files/ai-docker/llm_audit_trace.json.json",
         file_name: "llm_audit_trace.json"
     },
     {
